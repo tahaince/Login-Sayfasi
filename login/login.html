@@ -1,0 +1,82 @@
+<html>
+<head>
+<style>
+body{
+    background-image: url(manzara3.jpg);
+    background-size: cover;
+}
+#login{
+
+background-color: rebeccapurple;
+width: 500px;
+height: 300px;
+margin-top: 400px;
+margin-left: 650px;
+
+}
+label{
+
+    margin-left: 50px;
+    
+}
+#giris{
+
+margin-left:200px;
+margin-top: 50px;
+width: 100px;
+height: 30px;
+}
+
+
+</style>
+</head>
+<body>
+<div id="login">
+    <br><br>
+<label>KULLANICI ADI:</label>
+<input id="kullanıcıgiris">
+<br><br><br><br>
+<label>KULLANICI ADI:</label>
+<input id="sifregiris" type="password">
+<br><br>
+<button id="giris" onclick="kontrol()">Giriş</button>
+    
+
+
+</div>
+<script>
+var kullanıcıveri=[{kullaniciadi:"admin",şifre:"123"},
+{kullaniciadi:"Admin",şifre:"123456"},
+{kullaniciadi:"admin",şifre:"admin123"}];
+
+var girilenkullaniciadi;
+var girilensifre;
+var x;
+
+function kontrol(){
+
+girilenkullaniciadi=document.getElementById("kullanıcıgiris").value;
+girilensifre=document.getElementById("sifregiris").value;
+
+for(x of kullanıcıveri){
+
+    if(x.kullaniciadi==girilenkullaniciadi && x.şifre==girilensifre)
+{
+    window.open("https://www.youtube.com/watch?v=PAavIWxlvUo&list=RDOZiiAfHPtl0&index=14");
+    break;
+}
+
+
+else if(x.kullaniciadi!=girilenkullaniciadi || x.şifre!=girilensifre)
+
+{
+window.alert("Girilen Kullanıcı Adı veya Şifre yanlış!!!");
+break;
+}}
+            }
+
+</script>
+
+</body>
+
+</html>
